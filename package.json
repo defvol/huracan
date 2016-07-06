@@ -1,0 +1,23 @@
+{
+  "name": "huracan",
+  "version": "0.1.0",
+  "description": "Monitor cyclones near Mexico shores",
+  "bin": {
+    "huracan": "lib/cli.js"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "tape test/*.test.js"
+  },
+  "keywords": [
+    "generator-npm-pasta"
+  ],
+  "author": "Rodolfo Wilhelmy",
+  "license": "ISC",
+  "devDependencies": {
+    "tape": "^4.6.0"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}
