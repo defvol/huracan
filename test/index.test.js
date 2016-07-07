@@ -5,7 +5,7 @@ var huracan = require('../lib/index');
 test('advisory', function (t) {
   var fixture = fs.readFileSync(__dirname + '/fixtures/062034.shtml');
   var info = huracan.advisory(fixture.toString());
-  t.equal(info.location, '15.2N 124.7W', 'scrapes location');
+  t.deepEqual(info.location, [15.2, -124.7], 'scrapes location');
   t.end();
 })
 
