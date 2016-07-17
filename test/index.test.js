@@ -34,3 +34,16 @@ test('summary', function (t) {
   t.true(link.match('nhc.noaa.gov'), 'finds a link to the summary');
   t.end();
 });
+
+test('toGeoJSON', function (t) {
+  var info = huracan.advisory(fixtures.advisory);
+  var fcol = huracan.toGeoJSON(info);
+  t.equal(fcol.type, 'FeatureCollection', 'builds FeatureCollection');
+  t.equal(fcol.features.length, 1, 'holding a features array');
+  var feat = fcol.features[0];
+  t.equal(feat.type, 'Feature', 'there is one Feature');
+  t.equal(feat.geometry.type, 'Point', 'hurricane as Point');
+  var loc = [-124.7, 15.2];
+  t.deepEqual(feat.geometry.coordinates, loc, 'and its location');
+  t.end();
+});
