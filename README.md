@@ -12,5 +12,11 @@ Examples:
 Open the latest advisory in geojson.io
 
 ```bash
-huracan --latest --geojson | geojsonio
+% huracan --latest --geojson | geojsonio
+```
+
+## Install
+
+```bash
+% npm install -g huracan
 ```
