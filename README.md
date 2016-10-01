@@ -40,3 +40,5 @@ To see a map of these breakpoints, run:
 - [rodowi/json-to-geo](https://github.com/rodowi/json-to-geo)
 - [rodowi/nd-geojson](https://github.com/rodowi/nd-geojson)
 - [mapbox/geojsonio-cli](https://github.com/mapbox/geojsonio-cli)
+
+Generated map can be found at https://github.com/rodowi/huracan/blob/master/data/Breakpoints_2016.geojson
