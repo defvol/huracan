@@ -39,6 +39,13 @@ test('fetch', function (t) {
   });
 });
 
+test('nearestCoast', function (t) {
+  var center = [-110.67626953125, 21.453068633086783];
+  var place = huracan.nearestCoast(center).properties.name;
+  t.equal(place, 'Cabo San Lucas', 'closes breakpoint is Cabo San Lucas');
+  t.end();
+});
+
 test('summary', function (t) {
   var link = huracan.summary(fixtures.feed);
   t.true(link.match('nhc.noaa.gov'), 'finds a link to the summary');
