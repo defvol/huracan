@@ -481,6 +481,5 @@
 {"type":"Feature","geometry":{"type":"Point","coordinates":[-114.45,29.900000000000027]},"properties":{"name":"Isla San Luis","lng":-114.45,"lat":29.900000000000027}},
 {"type":"Feature","geometry":{"type":"Point","coordinates":[-107.14999999999999,24.07000000000005]},"properties":{"name":"Bahia Tempehuaya","lng":-107.14999999999999,"lat":24.07000000000005}},
 {"type":"Feature","geometry":{"type":"Point","coordinates":[-105.51,20.77000000000004]},"properties":{"name":"Punta Mita","lng":-105.51,"lat":20.77000000000004}},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-92.42499999999997,14.71000000000004]},"properties":{"name":"Puerto Chiapas","lng":-92.42499999999997,"lat":14.71000000000004}},
-{"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[0,0],[0,0],[0,0],[0,0]]}}
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-92.42499999999997,14.71000000000004]},"properties":{"name":"Puerto Chiapas","lng":-92.42499999999997,"lat":14.71000000000004}}
 ]}
