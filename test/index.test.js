@@ -5,7 +5,8 @@ var huracan = require('../lib/index');
 
 var fixtures = {
   advisory: fs.readFileSync(__dirname + '/fixtures/062034.shtml').toString(),
-  feed: fs.readFileSync(__dirname + '/fixtures/gis-ep.xml')
+  feed: fs.readFileSync(__dirname + '/fixtures/gis-ep.xml'),
+  noActivity: fs.readFileSync(__dirname + '/fixtures/no-hurricanes.xml')
 };
 
 var noaa = nock('http://www.nhc.noaa.gov')
@@ -21,12 +22,28 @@ test('advisory', function (t) {
 });
 
 test('fetch', function (t) {
-  t.plan(2);
+  t.plan(3);
+
   var want = { location: [15.2, -124.7] };
   huracan.fetch(function (err, info) {
     t.error(err, 'with no errors');
     t.deepEqual(info, want, 'finds the hurricane');
   });
+
+  var nhc = nock('http://www.nhc.noaa.gov')
+    .get('/gis-ep.xml')
+    .reply(200, fixtures.noActivity);
+
+  huracan.fetch(function (err, info) {
+    t.equal(err, 'no hurricanes found', 'handles no activity');
+  });
+});
+
+test('nearestCoast', function (t) {
+  var center = [-110.67626953125, 21.453068633086783];
+  var place = huracan.nearestCoast(center).properties.name;
+  t.equal(place, 'Cabo San Lucas', 'closes breakpoint is Cabo San Lucas');
+  t.end();
 });
 
 test('summary', function (t) {

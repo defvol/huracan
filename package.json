@@ -1,6 +1,6 @@
 {
   "name": "huracan",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Monitor cyclones near Mexico shores",
   "bin": {
     "huracan": "lib/cli.js"
@@ -22,6 +22,7 @@
     "tape": "^4.6.0"
   },
   "dependencies": {
+    "@turf/nearest": "^3.5.2",
     "cheerio": "^0.20.0",
     "minimist": "^1.2.0",
     "nock": "^8.0.0",
