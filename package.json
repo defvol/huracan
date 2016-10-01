@@ -1,6 +1,6 @@
 {
   "name": "huracan",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Monitor cyclones near Mexico shores",
   "bin": {
     "huracan": "lib/cli.js"
