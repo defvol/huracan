@@ -15,6 +15,13 @@ Open the latest advisory in geojson.io
 % huracan --latest --geojson | geojsonio
 ```
 
+Find the nearest coast to the hurricane
+
+```bash
+% node lib/cli.js --nearest
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-109.91000000000001,22.84000000000003]},"properties":{"name":"Cabo San Lucas"}}
+```
+
 ## Install
 
 ```bash
